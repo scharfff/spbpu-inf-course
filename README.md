@@ -213,8 +213,6 @@ flowchart LR
 
 [Python для ЕГЭ](https://github.com/scharfff/spbpu-inf-course/blob/2026/Python_%D0%B4%D0%BB%D1%8F_%D0%95%D0%93%D0%AD.md)
 
-[Яндекс Учебник. СПбПУ — Группа 511](https://education.yandex.ru/teacher-ege/inf/join?token=gAAAAABpi5pL6-7VLMuVOWbIzkuLNh7iBnfdiiQUPjk-fLCRQoVvqPjRBY_AGAqOHXPQkF7nHKgZamu0r0V4PkjXK4RK3nN2XCbpY9hGNueGgfM0pURBhCUNSmzfxA9Im7mSROmktuaKGwMv_dj1A37UgqUKjxCqRWtMXhHdHi8lS8563gaUzxv8vz_Cj3YGyAxc--86zmX1wvinyZ8tNLt-y6WGtLZvgA==)
-
 [Яндекс Учебник. Персональные занятия](https://education.yandex.ru/teacher-ege/inf/join?token=gAAAAABpi4GuAtw9o40C_BRHyyVCM-CU0SsUC0Zc4JyOTeHjRFh9VTobnY2WLc4kpf6pAm6FwpkXBmXWVsne0C5f0Yg_dsVKIccP8L6otSqgtuBorrf-sxkIM4x2i4vhbAKye3wByzC6EMumFN9hFHATk7Sn3YsLAY2TWDxT99Rwqije9_NkdRhyZpHCWX_Iqpzfv3NA6CbvdTioS21Sthz-3ANPYdiuiA==)
 
 ---
