@@ -1,4 +1,4 @@
-# Веб-приложение учебника ЕГЭ Информатика 2026
+# Веб-приложение учебника ЕГЭ Информатика 2027
 
 Статический сайт на [Astro](https://astro.build) с теорией, решениями и трекером прогресса.
 
@@ -23,7 +23,7 @@ npm run preview
 
 ## Деплой
 
-GitHub Actions (`.github/workflows/deploy-pages.yml`) публикует `app/dist` на GitHub Pages при push в ветку `2026` или `main`.
+GitHub Actions (`.github/workflows/deploy-pages.yml`) публикует `app/dist` на GitHub Pages при push в ветку `2027` или `main`.
 
 URL: https://scharfff.github.io/spbpu-inf-course/
 
@@ -31,7 +31,7 @@ URL: https://scharfff.github.io/spbpu-inf-course/
 
 | Путь | Назначение |
 |:---|:---|
-| `data/taxonomy.json` | 6 блоков заданий (как в README) |
+| `data/taxonomy.json` | 6 блоков заданий (как в README, разбивка 2027) |
 | `data/external-courses.json` | «Другие курсы» |
 | `scripts/build-index.mjs` | Индексация README и `.py` |
 | `src/pages/` | Страницы приложения |

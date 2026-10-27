@@ -1,5 +1,5 @@
 (function () {
-  const STORAGE_KEY = 'ege-inf-2026-progress';
+  const STORAGE_KEY = 'ege-inf-2027-progress';
   const VERSION = 1;
 
   function load() {
