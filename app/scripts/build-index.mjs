@@ -9,7 +9,7 @@ const OUT_FILE = path.join(APP_ROOT, 'src', 'data', 'content-index.json');
 
 const SOLUTION_DIRS = ['Решение', 'Решения'];
 const RAW_BASE =
-  'https://raw.githubusercontent.com/scharfff/spbpu-inf-course/2026';
+  'https://raw.githubusercontent.com/scharfff/spbpu-inf-course/2027';
 
 function parseTaskId(folderName) {
   const match = folderName.match(/^Задание_(\d+(?:_\d+)*)_/);
@@ -92,7 +92,7 @@ function scanTasks() {
       hasTheory,
       theoryMarkdown,
       solutions,
-      githubUrl: `https://github.com/scharfff/spbpu-inf-course/tree/2026/${entry.name}`,
+      githubUrl: `https://github.com/scharfff/spbpu-inf-course/tree/2027/${entry.name}`,
     });
   }
 
@@ -125,7 +125,7 @@ function main() {
   const index = {
     generatedAt: new Date().toISOString(),
     meta: {
-      title: 'ЕГЭ Информатика 2026',
+      title: 'ЕГЭ Информатика 2027',
       subtitle: 'Подготовительные курсы СПбПУ',
       contentRoot: CONTENT_ROOT,
     },

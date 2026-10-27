@@ -2,7 +2,7 @@ name: Deploy web app to GitHub Pages
 
 on:
   push:
-    branches: [2026, main]
+    branches: [2027, main]
     paths:
       - 'app/**'
       - 'Задание_*/**'
