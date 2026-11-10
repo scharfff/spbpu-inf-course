@@ -1,6 +1,7 @@
 ---
 import AppLayout from '../layouts/AppLayout.astro';
 import TaskChip from '../components/TaskChip.astro';
+import ExamStats from '../components/ExamStats.astro';
 import { getContentIndex, withBase } from '../lib/content';
 
 const { blocks, tasks, stats, meta } = getContentIndex();
@@ -68,6 +69,8 @@ function getTaskMeta(id: string) {
       </article>
     ))}
   </div>
+
+  <ExamStats />
 </AppLayout>
 
 <script define:vars={{ totalTasks: stats.taskCount, totalSolutions: stats.solutionCount }}>

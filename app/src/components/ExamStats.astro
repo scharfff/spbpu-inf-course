@@ -1,0 +1,106 @@
+---
+// Сводка процентов выполнения заданий ЕГЭ прошлого года.
+// Все цифры и тексты берутся из app/data/ege-2026-results.json.
+import { getContentIndex, getExamResults, withBase } from '../lib/content';
+import type { ExamTaskResult } from '../types';
+
+const results = getExamResults();
+const { tasks } = getContentIndex();
+
+const NBSP = '\u00a0';
+const pct = (n: number) => `${n.toFixed(1).replace('.', ',')}${NBSP}%`;
+
+// Порог считается по уровню того задания, на котором собрана статистика (2026 год).
+const thresholdOf = (t: ExamTaskResult) => results.thresholds[t.level2026 ?? t.level];
+
+// Ссылка на страницу темы, если она есть (№19, №20 и №21 живут на одной странице).
+function taskHref(n: number) {
+  const page = tasks.find((t) => t.id.split('-').includes(String(n)));
+  return page ? withBase(`/task/${page.id}`) : null;
+}
+
+const rows = results.tasks.map((t) => {
+  const threshold = thresholdOf(t);
+  const status = t.percent === null ? 'none' : t.percent >= threshold ? 'ok' : 'low';
+  const statusText =
+    status === 'none'
+      ? 'статистики нет'
+      : `решили ${pct(t.percent!)}, порог ${threshold}${NBSP}%, ${status === 'ok' ? 'порог пройден' : 'ниже порога'}`;
+  return { ...t, threshold, status, statusText, href: taskHref(t.number) };
+});
+
+const measured = rows.filter((r) => r.percent !== null);
+const best = measured.reduce((a, b) => (b.percent! > a.percent! ? b : a));
+const worst = measured.reduce((a, b) => (b.percent! < a.percent! ? b : a));
+const lowCount = measured.filter((r) => r.status === 'low').length;
+const numbersWord = (n: number) => (n % 10 === 1 && n % 100 !== 11 ? 'номеру' : 'номерам');
+const summary =
+  `Лучше всего решено №${best.number} (${pct(best.percent!)}), хуже всего №${worst.number} (${pct(worst.percent!)}). ` +
+  `Порог ФИПИ не пройден по ${lowCount} ${numbersWord(lowCount)} из ${measured.length}.`;
+
+const parts = results.parts.map((p) => ({
+  ...p,
+  rows: rows.filter((r) => r.number >= p.first && r.number <= p.last),
+}));
+
+const thresholdLegend = (Object.keys(results.thresholds) as (keyof typeof results.thresholds)[])
+  .map((lvl) => `${lvl}${NBSP}${results.thresholds[lvl]}${NBSP}%`)
+  .join(', ');
+---
+
+<section class="exam-stats" aria-labelledby="exam-stats-title">
+  <h2 id="exam-stats-title">{results.title}</h2>
+  <p class="exam-stats__lead">{results.description} {results.thresholdNote}</p>
+  <p class="exam-stats__summary">{summary}</p>
+
+  <ul class="exam-legend">
+    <li><span class="exam-legend__bar" aria-hidden="true"></span><span class="exam-icon exam-icon--ok" aria-hidden="true">✓</span>порог пройден</li>
+    <li><span class="exam-legend__bar exam-legend__bar--low" aria-hidden="true"></span><span class="exam-icon exam-icon--low" aria-hidden="true">!</span>ниже порога</li>
+    <li><span class="exam-legend__tick" aria-hidden="true"></span>порог для уровня задания ({thresholdLegend})</li>
+  </ul>
+
+  <div class="exam-stats__parts">
+    {parts.map((part) => (
+      <div class="exam-stats__part">
+        <h3>{part.title}, задания с {part.first} по {part.last}</h3>
+        <ol class="exam-list">
+          {part.rows.map((r) => (
+            <li class={`exam-row exam-row--${r.status}`} title={`№${r.number} ${r.topic}, ${r.statusText}`}>
+              <span class="exam-row__num">
+                {r.href ? <a href={r.href}>№{r.number}</a> : <span>№{r.number}</span>}
+              </span>
+              <span class="exam-row__topic">
+                {r.topic}{r.note && (
+                  <sup><a href={`#exam-note-${r.note}`} aria-label={`сноска ${r.note}`}>{r.note}</a></sup>
+                )}
+                <abbr class="exam-row__level" title={`${results.levelNames[r.level]} уровень`}>{r.level}</abbr>
+              </span>
+              <span class="exam-row__track" aria-hidden="true">
+                {r.percent !== null && <span class="exam-row__bar" style={`width: ${r.percent}%`} />}
+                {r.percent !== null && <span class="exam-row__tick" style={`left: ${r.threshold}%`} />}
+              </span>
+              <span class="exam-row__value">
+                <span aria-hidden="true">{r.percent !== null ? pct(r.percent) : 'нет данных'}</span>
+                <span class={`exam-icon exam-icon--${r.status}`} aria-hidden="true">
+                  {r.status === 'ok' ? '✓' : r.status === 'low' ? '!' : ''}
+                </span>
+                <span class="visually-hidden">{r.statusText}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
+
+    <div class="exam-stats__notes">
+      <ul class="exam-notes">
+        {results.notes.map((n) => (
+          <li id={`exam-note-${n.id}`}><sup>{n.id}</sup> {n.text}</li>
+        ))}
+      </ul>
+      <p class="exam-stats__source">
+        Источник. <a href={results.source.url} target="_blank" rel="noopener">{results.source.title}</a> ({results.source.detail}).
+      </p>
+    </div>
+  </div>
+</section>

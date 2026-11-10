@@ -1,8 +1,14 @@
-import type { ContentIndex } from '../types';
+import type { ContentIndex, ExamResults } from '../types';
 import index from '../data/content-index.json';
+import examResults from '../../data/ege-2026-results.json';
 
 export function getContentIndex(): ContentIndex {
   return index as ContentIndex;
+}
+
+/** Проценты выполнения заданий ЕГЭ 2026 (ФИПИ), правятся в app/data/ege-2026-results.json. */
+export function getExamResults(): ExamResults {
+  return examResults as ExamResults;
 }
 
 export function getTask(id: string) {
