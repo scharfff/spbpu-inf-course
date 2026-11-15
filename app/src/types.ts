@@ -38,7 +38,7 @@ export interface ExternalCourse {
 export type TaskLevel = 'Б' | 'П' | 'В';
 
 export interface ExamTaskResult {
-  /** Номер задания по проекту ФИПИ 2027. */
+  /** Номер задания по итоговой демоверсии ФИПИ 2027 (совпадает с 2026 годом). */
   number: number;
   topic: string;
   /** Уровень задания в 2027 году. */
