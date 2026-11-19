@@ -83,7 +83,7 @@ flowchart LR
   T1 --> T1c["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_7_Кодирование_информации'>№7: Кодирование изображений и звука</a>"]
   T1 --> T1d["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_8_Комбинаторика'>№8: Количество информации. Комбинаторика</a>"]
   T1 --> T1f["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_11_Объем_памяти_кодирование'>№11: Объём памяти. Кодирование символов</a>"]
-  T1 --> T1g["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_12_Редактор'>№12: Формальные исполнители. Машина Тьюринга</a>"]
+  T1 --> T1g["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_12_Машина_Тьюринга'>№12: Формальные исполнители. Машина Тьюринга</a>"]
   T1 --> T1h["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_13_IP_адресация'>№13. IP-адресация. Маска подсети</a>"]
 
   click T1a "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_1_Графы_и_таблицы"
@@ -91,7 +91,7 @@ flowchart LR
   click T1c "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_7_Кодирование_информации"
   click T1d "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_8_Комбинаторика"
   click T1f "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_11_Объем_памяти_кодирование"
-  click T1g "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_12_Редактор"
+  click T1g "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_12_Машина_Тьюринга"
   click T1h "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_13_IP_адресация"
 ```
 
