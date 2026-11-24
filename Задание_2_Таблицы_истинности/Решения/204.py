@@ -2,7 +2,6 @@
 # 0 1 - - 
 # 1 - 1 0
 # - 1 1 0
-
 print('w x y z')
 for w in [0,1]:
     for x in [0,1]:
@@ -11,3 +10,13 @@ for w in [0,1]:
                 F = ((x or y) <= z) or (y == w) or z
                 if F == 0:
                     print(w,x,y,z)
+"""
+w x y z
+0 0 1 0
+0 1 1 0
+1 1 0 0
+"""
+#
+# 0 1 - - 
+# 1 - 1 0
+# - 1 1 0

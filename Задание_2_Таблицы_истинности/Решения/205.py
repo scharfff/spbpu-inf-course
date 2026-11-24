@@ -10,3 +10,13 @@ for w in [0,1]:
                 F = (not(z <= w)) or (x <= y) or (not x)
                 if F == 0:
                     print(w,x,y,z)
+# w z x y
+# 0 0 1 0 
+# 1 0 1 0 
+# - 1 1 0 
+"""
+w x y z
+0 1 0 0
+1 1 0 0
+1 1 0 1
+"""
