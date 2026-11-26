@@ -81,7 +81,6 @@ flowchart LR
   T1 --> T1a["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_1_Графы_и_таблицы'>№1: Информационные модели. Графы и таблицы</a>"]
   T1 --> T1b["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_4_Кодирование_Фано'>№4: Кодирование. Условие Фано</a>"]
   T1 --> T1c["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_7_Кодирование_информации'>№7: Кодирование изображений и звука</a>"]
-  T1 --> T1d["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_8_Комбинаторика'>№8: Количество информации. Комбинаторика</a>"]
   T1 --> T1f["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_11_Объем_памяти_кодирование'>№11: Объём памяти. Кодирование символов</a>"]
   T1 --> T1g["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_12_Машина_Тьюринга'>№12: Формальные исполнители. Машина Тьюринга</a>"]
   T1 --> T1h["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_13_IP_адресация'>№13. IP-адресация. Маска подсети</a>"]
@@ -89,13 +88,34 @@ flowchart LR
   click T1a "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_1_Графы_и_таблицы"
   click T1b "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_4_Кодирование_Фано"
   click T1c "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_7_Кодирование_информации"
-  click T1d "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_8_Комбинаторика"
   click T1f "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_11_Объем_памяти_кодирование"
   click T1g "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_12_Машина_Тьюринга"
   click T1h "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_13_IP_адресация"
 ```
 
-### 2.2. Офисные приложения
+### 2.2. Python база
+
+Базовые конструкции Python: циклы, строки, списки, условия.
+
+```mermaid
+flowchart LR
+  T3["Python база"]
+  T3 --> T3a["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_2_Таблицы_истинности'>№2: Таблицы истинности. Логические выражения</a>"]
+  T3 --> T3b["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_5_Исполнитель'>№5: Исполнитель. Формальные алгоритмы</a>"]
+  T3 --> T3c["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_6_Черепаха'>№6: Анализ алгоритмов. Черепаха</a>"]
+  T3 --> T3f["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_8_Комбинаторика'>№8: Количество информации. Комбинаторика</a>"]
+  T3 --> T3d["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_14_Системы_счисления'>№14: Системы счисления</a>"]
+  T3 --> T3e["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_15_Логические_выражения'>№15: Логические выражения. Числовые условия</a>"]
+
+  click T3a "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_2_Таблицы_истинности"
+  click T3b "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_5_Исполнитель"
+  click T3c "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_6_Черепаха"
+  click T3f "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_8_Комбинаторика"
+  click T3d "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_14_Системы_счисления"
+  click T3e "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_15_Логические_выражения"
+```
+
+### 2.3. Офисные приложения
 
 Работа с электронными таблицами и текстовыми документами в LibreOffice/OpenOffice.
 
@@ -113,26 +133,6 @@ flowchart LR
   click T2e "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_10_Обработка_текстовой_информации"
   click T2c "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_18_Робот_сборщик_монет"
   click T2d "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_22_Вычислительные_процессы"
-```
-
-### 2.3. Python база
-
-Базовые конструкции Python: циклы, строки, списки, условия.
-
-```mermaid
-flowchart LR
-  T3["Python база"]
-  T3 --> T3a["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_2_Таблицы_истинности'>№2: Таблицы истинности. Логические выражения</a>"]
-  T3 --> T3b["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_5_Исполнитель'>№5: Исполнитель. Формальные алгоритмы</a>"]
-  T3 --> T3c["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_6_Черепаха'>№6: Анализ алгоритмов. Черепаха</a>"]
-  T3 --> T3d["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_14_Системы_счисления'>№14: Системы счисления</a>"]
-  T3 --> T3e["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_15_Логические_выражения'>№15: Логические выражения. Числовые условия</a>"]
-
-  click T3a "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_2_Таблицы_истинности"
-  click T3b "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_5_Исполнитель"
-  click T3c "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_6_Черепаха"
-  click T3d "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_14_Системы_счисления"
-  click T3e "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_15_Логические_выражения"
 ```
 
 ### 2.4. Python файлы
@@ -173,10 +173,11 @@ flowchart LR
 flowchart LR
   T6["Python продвинутые алгоритмы"]
   T6 --> T6b["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_25_Маски_чисел_и_делители'>№25: Обработка целочисленной информации</a>"]
-  T6 --> T6c["№26: Сортировка. Обработка целочисленных данных"]
+  T6 --> T6c["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_26_Сортировка'>№26: Сортировка. Обработка целочисленных данных</a>"]
   T6 --> T6d["<a href='https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_27_Анализ_данных'>№27: Анализ данных. Кластеризация</a>"]
 
   click T6b "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_25_Маски_чисел_и_делители"
+  click T6c "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_26_Сортировка"
   click T6d "https://github.com/scharfff/spbpu-inf-course/tree/2027/Задание_27_Анализ_данных"
 ```
 
